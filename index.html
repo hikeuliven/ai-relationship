@@ -3,8 +3,8 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no,date=no,url=no">
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
 <title>나와 AI, 우리의 관계는?</title>
 
@@ -26,17 +26,16 @@
 
   /* 아이폰 프레임 */
   .phone-frame {
-    width: var(--device-w);
-      height: var(--device-h);
-      background: linear-gradient(180deg, #ffffff 0%, #fff6fb 20%, #fff6fb 80%, #ffffff 100%);
-      border-radius: 30px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      isolation: isolate;
+    width: 390px;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.18);
 
     position: relative;
     overflow: hidden; 
@@ -142,19 +141,6 @@
     animation: buttonPop 0.25s ease;
     }
 
-  @supports (-webkit-touch-callout: none) {
-  body {
-    min-width: 390px !important;
-    max-width: 390px !important;
-    margin: 0 auto !important;
-  }
-
-  .phone-frame {
-    width: 100% !important;
-    max-width: 390px !important;
-  }
-}
-
 </style>
 </head>
 
@@ -164,11 +150,11 @@
 
     <div class="bg-blur"></div>
 
-    <img src="images/title.png" class="title-img" alt="타이틀 이미지">
-    <img src="images/main.png" class="main-img" alt="메인 이미지">
+    <img src="title.png" class="title-img" alt="타이틀 이미지">
+    <img src="main.png" class="main-img" alt="메인 이미지">
 
-    <img src="images/robot.png" class="floating deco-a">
-    <img src="images/heart1.png" class="floating deco-b">
+    <img src="robot.png" class="floating deco-a">
+    <img src="heart1.png" class="floating deco-b">
 
     <button class="start-btn gamja-flower-regular"
       onclick="this.classList.add('pop'); setTimeout(() => { this.classList.remove('pop'); }, 250); location.href='index2.html'"
@@ -180,6 +166,4 @@
 </div>
 
 </body>
-
 </html>
-
